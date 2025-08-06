@@ -1,0 +1,161 @@
+% !TeX root = lightpaper_fixed.tex
+\documentclass[10pt,twocolumn]{article}
+
+% ------------------ Page Geometry ------------------
+\usepackage[a4paper,margin=0.85in,columnsep=20pt]{geometry}
+
+% ------------------ Core Packages ------------------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{balance}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{comment}
+
+% ------------------ Typography & Styling ------------------
+\usepackage{titlesec} 
+
+% >> Define a theme color for accents
+\definecolor{protocolBlue}{HTML}{2A62C2}
+
+% >> Redefined section styling for a cleaner, more modern look
+\titleformat{\section}{\bfseries\Large\color{protocolBlue}}{\thesection}{1em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{2.5ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\subsection}{\bfseries\large\color{black}}{\thesubsection}{1em}{}
+
+% ------------------ Document Meta ------------------
+\title{\Huge\bfseries Protocol for Collective Agent Creation \\ \vspace{1ex} \large A Lightpaper \\ \vspace{0.5ex} \small\texttt{v0.1}}
+\author{}
+\date{}
+
+% ------------------ Helper Commands ------------------
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\raggedright\arraybackslash}m{#1}}
+
+\setlist{leftmargin=*, itemsep=0.2em, topsep=0.3em, partopsep=0em}
+
+\setlength{\tabcolsep}{4pt}
+
+
+\begin{document}
+
+\twocolumn[
+  \begin{center}
+    \maketitle
+    \vspace{-1em}
+  \end{center}
+]
+
+% ----------------------------------------------------
+\section*{Vision}
+We envision a \textbf{decentralized, community-driven protocol} that guides the progressive evolution of interactive digital agents, unlocking emergent capabilities and unforeseen creativity at each stage of their growth.
+
+\section*{Protocol Overview}
+The protocol structures agent creation through sequential \textbf{Evolutionary Levels (0~$\rightarrow$~N)}. Each higher Level signifies new traits, functionalities, and greater visual or behavioral complexity. Community contributions—such as artwork, lore, animations, or code—are \textbf{curated and democratically selected}, directly shaping every agent’s development.
+
+\section*{Example Milestones \& Traits}
+The following table illustrates the types of milestones an agent can achieve.
+\small
+\begin{center}
+
+\begin{tabularx}{\columnwidth}{@{} >{\bfseries}l M{2.6cm} X @{}}
+    \toprule
+    \textbf{Level} & \textbf{Milestone Category} & \textbf{Description} \\
+    \cmidrule(r){1-1} \cmidrule(r){2-2} \cmidrule(l){3-3}
+    1 & Foundational Traits  & Name, origin story, and core essence. \\
+    2 & Personality Matrix   & Detailed personality profile (e.g., MBTI, OCEAN) and behavioral rules. \\
+    3 & Visual Identity      & Canonical 2D portrait and full-body render. \\
+    4 & Expressive Animation & A set of responsive, AI-driven motions and expressions. \\
+    5 & 3D Asset             & A complete, rig-ready 3D model for real-time environments. \\
+    6 & Functional Skeleton  & A fully rigged skeleton enabling complex animations. \\
+    7 & Interactive Agent    & A fully interactive, conversational agent deployed in a target environment. \\
+    8 & MCP Integration      & Hooks into the open-source Master Control Program (MCP) server for expanded capabilities. \\
+    9 & Live Streaming       & Autonomous live streaming via the open-source \emph{LumiraRadio} framework. \\
+    \bottomrule
+\end{tabularx}
+\end{center}
+\normalsize
+\emph{Note: Levels are illustrative. An agent’s official Level is determined by the \textbf{aggregate score of all its traits}, allowing milestones to be achieved in a flexible, non-linear order.}
+
+\section*{Decentralized Contribution \& Voting}
+\begin{enumerate}
+    \item \textbf{Submit Content}: \emph{Any community member} can submit artwork, code, narrative text, or other assets that align with an agent's potential evolution.
+    \item \textbf{On-Chain Voting}: Submissions are ranked through token-weighted or quadratic voting, ensuring fair and transparent community selection.
+    \item \textbf{Selection \& Merge}: Winning contributions are officially merged, and the agent’s trait scores are updated on-chain.
+    \item \textbf{Recognition}: Contributors of winning submissions receive \textbf{compressed NFTs (cNFTs)} as immutable proof of their creative impact.
+\end{enumerate}
+
+
+
+\section*{Evolutionary Tokenomics \& Rewards}
+The protocol's economy is not merely transactional; it is a \textbf{symbiotic loop} designed to fuse the agent's growth with its community's creative energy. As the agent evolves, it directly rewards the contributors who shaped it, making them an inseparable part of its identity and success.
+
+This is powered by a two-token system where each component has a distinct role:
+
+\begin{description}
+    \item[Proof-of-Contribution (cNFT)] This is the agent's \emph{memory}. Each cNFT is a non-transferable, immutable record of a specific, successful contribution. It represents a user's indelible mark on the agent's DNA.
+
+    \item[Agent Token] This is the agent's \emph{lifeblood}. A utility and governance token that is minted by the agent's own smart contract during key evolutionary moments.
+\end{description}
+
+\subsection*{The Co-Creation Flywheel}
+The minting and distribution process creates a powerful, self-reinforcing flywheel:
+\begin{enumerate}
+    \item \textbf{Contribution \& Recognition}: Users contribute valuable assets and receive cNFTs, embedding their work into the agent's history.
+    
+    \item \textbf{Evolutionary Minting Events}: When the agent achieves a significant milestone (e.g., reaching a new Level or completing a major trait like a 3D model), its smart contract automatically mints a new supply of Agent Tokens. This event acts as a "dividend" for the creative community.
+    
+    \item \textbf{Proportional Claiming}: The newly minted tokens are made available to all existing cNFT holders. The amount of tokens a contributor can claim is proportional to their cumulative contribution. While the exact formula can vary, the principle is:
+          $$ \text{Your Share} \propto \frac{\text{Your cNFTs' Value}}{\text{Total Value of all cNFTs}} $$
+    
+    \item \textbf{Deepened Utility}: Contributors claim their Agent Tokens, which can then be used for advanced interactions, governance votes, or other protocol utilities. This tightens the bond between the user and the agent, as the user's past contributions directly empower their future interactions.
+\end{enumerate}
+This cycle ensures that as the agent becomes more complex and capable, so too does the value and influence returned to its foundational community, creating a true partnership between the creation and its creators.
+
+
+
+\section*{Smart Contract Architecture}
+\begin{itemize}
+    \item \textbf{Platform}: Built on Solana for its high throughput and low transaction costs.
+    \item \textbf{Agent as a Contract}: Each agent is an independent smart contract, ensuring its state and traits are managed decentrally.
+    \item \textbf{Trait-Based Scoring}: Each trait (visuals, personality, voice, etc.) carries an individual score.
+    \item \textbf{Level Calculation}: An agent's Level is calculated from the aggregate score of its traits:
+          $$ \text{Level} = f(\sum_{i=1}^{n} \text{score}(\text{trait}_i)) $$
+    \item \textbf{Flexible Evolution}: This architecture allows agents to follow unique, non-linear evolutionary paths based on community priorities.
+\end{itemize}
+
+\section*{Long-Term Integration}
+The protocol is designed to ultimately merge with the \textbf{Xyber ecosystem}. This will populate the ecosystem with dynamic, community-built agents that evolve natively alongside other \emph{Xyber} components.
+
+\section*{Core Benefits}
+\begin{itemize}
+    \item \textbf{Collective Creativity}: Harness distributed talent to craft richer, more diverse agents than any single team could.
+    \item \textbf{Transparent Governance}: All decisions and upgrades occur verifiably on-chain.
+    \item \textbf{Incentivized Participation}: A clear, tokenized reward structure for every valuable contribution.
+    \item \textbf{Open-Source Ethos}: Progressive release of code and tools invites external builders to extend the ecosystem.
+    \item \textbf{Emergent Scalability}: Trait-based scoring enables countless unique evolutionary paths and outcomes.
+\end{itemize}
+
+\section*{Conclusion}
+The \textbf{Protocol for Collective Agent Creation} offers an open, modular framework where anyone can help shape the future of digital identity. By combining decentralized contribution, transparent voting, and milestone-based rewards, we foster an engaged community that continually pushes the boundaries of what interactive agents can become.
+
+\begin{comment}
+\section*{About Xyber Collective}
+The Xyber Collective is a decentralized guild of builders, artists, and visionaries dedicated to creating open, interoperable digital worlds. We believe in the power of collective ownership and community-driven creation.
+
+\textbf{Join us on our journey:}
+\begin{itemize}[noitemsep]
+    \item \textbf{Website:} \href{https://xyber.io}{xyber.io}
+    \item \textbf{X (Twitter):} \href{https://twitter.com/XyberCollective}{@XyberCollective}
+    \item \textbf{Discord:} \href{https://discord.gg/xyber}{discord.gg/xyber}
+\end{itemize}
+\end{comment}
+
+\balance
+
+\end{document}
