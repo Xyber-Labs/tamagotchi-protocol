@@ -21,3 +21,4 @@ with governance and selection happening through on-chain voting.
 2. Submit your contribution via PR; go through open review and DAO voting.  
 3. Approved contributions are merged, and on-chain metadata is updated accordingly.
 
+
